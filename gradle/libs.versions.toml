@@ -1,9 +1,12 @@
 [versions]
-agp = "9.0.0"
+#noinspection AndroidGradlePluginVersion
+agp = "8.13.2"
 kotlin = "2.3.0"
 coreKtx = "1.17.0"
 composeBom = "2026.01.00"
 activityCompose = "1.12.2"
+hilt = "2.58"
+ksp = "2.3.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -17,7 +20,12 @@ compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling
 
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
