@@ -56,8 +56,6 @@ kotlin {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-
     // Compose
     val composeBom = platform(libs.compose.bom)
     implementation(composeBom)
@@ -71,4 +69,5 @@ dependencies {
     // Hilt
     implementation(libs.hilt)
     ksp(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
 }
