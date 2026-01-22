@@ -54,6 +54,9 @@ kotlin {
 }
 
 dependencies {
+    // Activity
+    implementation(libs.activity.compose)
+
     // Compose
     val composeBom = platform(libs.compose.bom)
     implementation(composeBom)
@@ -62,10 +65,12 @@ dependencies {
     implementation(libs.compose.ui.tooling.preview)
     debugImplementation(libs.compose.ui.tooling)
 
-    implementation(libs.activity.compose)
-
     // Hilt
     implementation(libs.hilt)
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
+
+    // Images
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 }

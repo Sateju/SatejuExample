@@ -1,8 +1,9 @@
-package com.jjtelechea.satejuexample.ui.list
+package com.jjtelechea.satejuexample.ui.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import com.jjtelechea.satejuexample.ui.list.ListScreen
 import com.jjtelechea.satejuexample.ui.theme.SatejuTheme
 import dagger.hilt.android.AndroidEntryPoint
 
