@@ -86,4 +86,11 @@ dependencies {
     implementation(libs.room.runtime)
     ksp(libs.room.compiler)
     implementation(libs.room.ktx)
+
+    // Network
+    implementation(libs.retrofit)
+    val okhttpBom = platform(libs.okhttp.bom)
+    implementation(okhttpBom)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging.interceptor)
 }
